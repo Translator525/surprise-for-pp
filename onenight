@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise</title>
+  <style>
+    .surprise {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    button {
+      font-size: 26px; /* 设置按钮字体大小 */
+      padding: 10px 20px; /* 设置按钮内边距 */
+    }
+
+    img {
+      display: none; /* 初始隐藏图片 */
+      max-width: 100%; /* 图片最大宽度为100% */
+      height: 60%;
+    }
+  </style>
+</head>
+<body>
+  <div class="surprise">
+
+
+                  <button onclick="like()">👉Just Click Here!👈</button>
+                  <span id="likeCount">0</span>
+
+                  <h1 id="thankYouMessage1"  style="display: none;">
+                    Hello pp. 😎
+                  </h1>
+
+                  <h1 id="thankYouMessage2"  style="display: none;">
+                    How ya doin? 😋 
+                  </h1>
+
+                  <h1 id="thankYouMessage3"  style="display: none;">
+                    Want a suprise? Take this!
+                  </h1>
+ 
+                    <img id="thankYouMessage4"  style="display: none;" src="ppduck.jpg">
+
+                  <h1 id="thankYouMessage5"  style="display: none;">
+                    Now time to sleep. 🌙
+                  </h1>
+
+                  <h1 id="thankYouMessage6"  style="display: none;">
+                    No, there's no more.😕
+                  </h1>
+
+                  <h1 id="thankYouMessage7"  style="display: none;">
+                    🔈I SAID NO MOOOOOORE!
+                  </h1>
+ 
+                    <h1 id="thankYouMessage8"  style="display: none;">
+                        Never mind. keep on clicking. I will go to bed. 886~
+                    </h1>
+
+                    <h1 id="thankYouMessage9"  style="display: none;">
+                       😘Sleep tight.
+                    </h1>
+                    </p>
+                  
+                    <script>
+                        var count = 0;
+                    
+                        function like() {
+                            count++;
+                            document.getElementById("likeCount").innerText = count;
+                    
+                            for (var i = 1; i <= 9; i++) {
+                                var message = document.getElementById("thankYouMessage" + i);
+                                if (count >= 1 && count <= 6 && count === i) {
+                                    message.style.display = "block";
+                                } else {
+                                    message.style.display = "none";
+                                }
+                            }
+                    
+                            if (count >= 7 && count <= 11) {
+                                document.getElementById("thankYouMessage7").style.display = "block";
+                            } else {
+                                document.getElementById("thankYouMessage7").style.display = "none";
+                            }
+                    
+                            if (count === 12) {
+                                document.getElementById("thankYouMessage8").style.display = "block";
+                            } else {
+                                document.getElementById("thankYouMessage8").style.display = "none";
+                            }
+                    
+                            if (count >= 13) {
+                                document.getElementById("thankYouMessage9").style.display = "block";
+                            } else {
+                                document.getElementById("thankYouMessage9").style.display = "none";
+                            }
+                        }
+                    </script>
+                    
+                    
+                    
+            </div>
+</body>
+</html>
